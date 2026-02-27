@@ -1,0 +1,44 @@
+[project]
+name = "ai-model-playground"
+version = "0.1.0"
+description = "Personal environment for quickly testing any HuggingFace model locally"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "transformers>=4.40",
+    "huggingface-hub>=0.20",
+    "accelerate>=0.25",
+    "timm>=1.0",
+    "peft>=0.10",
+    "pillow>=10.0",
+    "sentencepiece>=0.1",
+    "safetensors>=0.4",
+    "requests>=2.31",
+    "rich>=13.0",
+    "click>=8.1",
+]
+
+[project.optional-dependencies]
+quantize = ["bitsandbytes>=0.41"]
+audio = ["torchaudio>=2.0", "librosa>=0.10", "soundfile>=0.12"]
+diffusion = ["diffusers>=0.27"]
+all = [
+    "bitsandbytes>=0.41",
+    "torchaudio>=2.0",
+    "librosa>=0.10",
+    "soundfile>=0.12",
+    "diffusers>=0.27",
+]
+
+[tool.setuptools]
+py-modules = ["loader", "run"]
+
+[tool.setuptools.packages]
+find = {}
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

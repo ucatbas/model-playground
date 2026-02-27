@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.env
+models/
+outputs/
+samples/custom_inputs/
+*.gguf
+*.bin
+*.safetensors
+*.pt
+.DS_Store
